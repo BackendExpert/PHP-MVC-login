@@ -23,6 +23,12 @@
             }else{
                 return  false;
             }
+        }
 
+        //register User
+
+        public function register($data){
+            $this->db->query("INSERT INTO user_tbl (userName,userEmail,userUid,userPwd)VALUES(:name, :email, :Uid, :password)");
+            
         }
     }
