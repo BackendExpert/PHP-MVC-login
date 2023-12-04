@@ -13,7 +13,7 @@
 </style>
 
 <div class="container">
-    <a href=""><button class="btn btn-primary bck-btn">Back</button></a>
+    <a href="index.php"><button class="btn btn-primary bck-btn">Back</button></a>
     <div class="card">
         <div class="card-header">
             Sign Up User
