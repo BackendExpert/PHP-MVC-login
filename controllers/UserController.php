@@ -28,7 +28,7 @@
 
             if(empty($data_array['userName']) || empty($data_array['userEmail']) || empty($data_array['userUid']) || empty($data_array['userPwd']) || empty($data_array['repeatPwd'])) {
                 ViewError("register", "Inputs Are Empty...!");
-                redirect("../signup.php");
+                redirect("../view/signup.php");
             }
         }
     }

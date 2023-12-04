@@ -14,7 +14,7 @@
             elseif(empty($msg) && !empty($_SESSION[$name])){
                 $class = !empty($_SESSION[$name.'_class']) ? $_SESSION[$name.'_class'] : $class;
                 echo "<div class='".$class."' role='alert'>
-                        <strong>ERROR : </strong>". $_SESSION[$nmae] . "
+                        <strong>ERROR : </strong>". $_SESSION[$name] . "
                         <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
                       </div>";
             } 
