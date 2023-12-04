@@ -40,6 +40,14 @@
                 ViewError("register", "Invalid Email Address");
                 redirect("../view/signup.php");
             }
+
+            if(strlen($data_array['userPwd']) < 6){
+                ViewError("register", "Password Must be more then 6 characters");
+                redirect("../view/signup.php");
+            }elseif($data_array['userPwd'] !== $data_array['repeatPwd']){
+                ViewError("register", "Passwords not match");
+                redirect("../view/signup.php");
+            }
         }
     }
 
