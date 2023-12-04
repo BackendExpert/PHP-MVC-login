@@ -19,7 +19,7 @@
             Sign Up User
         </div>
         <div class="card-body">
-            <form action="" method="POST">
+            <form action="../controllers/UserController.php" method="POST">
                 <label for="username">Username : </label>
                 <input type="text" name="userName" id="" class="form-control"><br>
 
