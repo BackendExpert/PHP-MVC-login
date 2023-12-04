@@ -88,6 +88,13 @@
             if($this->modelUser->emailUsernameFind($data_array['name/email'], $data_array['name/email'])){
                 //if user found
                 $userLogin = $this->modelUser->login($data_array['name/email'], $data_array['userPwd']);
+            
+                if($userLogin){
+                    $this->UserSession($userLogin);
+                }else{
+                    ViewError("login", "Password Incorrect");
+                    redirect("../view/login.php");
+                }
             }else{
                 ViewError("login", "User Not Found");
                 redirect("../view/login.php");
