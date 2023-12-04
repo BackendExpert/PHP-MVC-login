@@ -1,6 +1,15 @@
 <?php   
 
+    include("../models/UserModel.php");
+
     class UserController {
+
+        private $modelUser;
+
+        public function __construct(){
+            $this->modelUser = new UserModel;
+        }
+
         public function register(){
 
         }
