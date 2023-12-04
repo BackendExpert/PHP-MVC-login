@@ -7,7 +7,7 @@
     <hr>
     <div class="text-center">
         <a href=""><button class="btn btn-primary">Login</button></a>
-        <a href=""><button class="btn btn-success">Register</button></a>
+        <a href="signup.php"><button class="btn btn-success">Register</button></a>
     </div>
 
 </div>
