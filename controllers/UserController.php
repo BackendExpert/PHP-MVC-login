@@ -21,7 +21,7 @@
                 'userUid' => trim($_POST['userUid']),
                 'userPwd' => trim($_POST['userPwd']),
                 'repeatPwd' => trim($_POST['pwdRepeat'])
-            ]
+            ];
 
         }
     }
