@@ -52,6 +52,13 @@
             }
             $this->stmt->bindValue($parm, $value, $type);
         }
+
+        //execute statment
+        public function execute(){
+            return $this->stmt->execute();
+        }
+
+        
     }
 
 
