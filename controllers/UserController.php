@@ -107,6 +107,16 @@
             $_SESSION['userEmail'] = $user->userEmail;
             redirect("../view/index.php");
         }
+
+        //logout
+
+        public function logout(){
+            unset($_SESSION['usersId']);
+            unset($_SESSION['userName']);
+            unset($_SESSION['userEmail']);
+            session_destroy();
+            redirect("../view/index.php");
+        }
     }
 
     $user = new UserController;
@@ -119,5 +129,13 @@
             case 'login':
                 $user->login();
                 break;
+        }
+    }else{
+        switch($_GET['x']){
+            case 'logout':
+                $user->logout();
+                break;
+            default:
+            redirect("../view/index.php");
         }
     }
