@@ -4,7 +4,7 @@
 
 <div class="container">
     <h1 class="text-center">Welcome, <?php
-        if(isset($_SESSION['usersId'])){
+        if(isset($_SESSION['userName'])){
             echo explode(" ", $_SESSION['userName'])[0];
         }else{
             echo "To System";
