@@ -11,6 +11,17 @@
         }
 
         public function register(){
+            //filter data
+            $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+
+            //inputs as array
+            $data_array = [
+                'userName' => trim($_POST['userName']),
+                'userEmail' => trim($_POST['userEmail']),
+                'userUid' => trim($_POST['userUid']),
+                'userPwd' => trim($_POST['userPwd']),
+                'repeatPwd' => trim($_POST['pwdRepeat'])
+            ]
 
         }
     }
