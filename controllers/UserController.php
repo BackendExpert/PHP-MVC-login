@@ -48,6 +48,15 @@
                 ViewError("register", "Passwords not match");
                 redirect("../view/signup.php");
             }
+
+            //check user already in the db
+            if($this->modelUser->emailUsernameFind($data_array['userEmail'],$data_array['userName'])){
+                ViewError("register", "User Already Exists");
+                redirect("../view/signup.php");
+            }
+
+            //hash password
+            $data_array['userPwd'] = password_hash($data_array['userPwd'], PASSWORD_DEFAULT);
         }
     }
 
