@@ -20,3 +20,10 @@
             } 
         }
     }
+
+    //function to redirect
+
+    function redirect($location){
+        header("location: ".$location);
+        exit;
+    }
