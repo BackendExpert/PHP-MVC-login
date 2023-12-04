@@ -1,7 +1,7 @@
 <?php 
     class Database { 
         private $host = "localhost";
-        private $user = "user";
+        private $user = "root";
         private $pass = "";
         private $db_name = "mvc_login_tb";
 

@@ -23,6 +23,11 @@
                 'repeatPwd' => trim($_POST['pwdRepeat'])
             ];
 
+            //user input Validate
+
+            if(empty($data_array['userName']) || empty($data_array['userEmail']) || empty($data_array['userUid']) || empty($data_array['userPwd']) || empty($data_array['repeatPwd'])) {
+
+            }
         }
     }
 
