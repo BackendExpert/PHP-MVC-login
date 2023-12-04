@@ -27,7 +27,7 @@
             //user input Validate
 
             if(empty($data_array['userName']) || empty($data_array['userEmail']) || empty($data_array['userUid']) || empty($data_array['userPwd']) || empty($data_array['repeatPwd'])) {
-                ViewError("register", "Inputs Are Empty...!");
+                ViewError("register", "Fill All Inputs...!");
                 redirect("../view/signup.php");
             }
 
@@ -74,6 +74,14 @@
                 'name/email' => trim($_POST['name/email']),
                 'userPwd' => trim($_POST['userPwd'])
             ];
+
+            //validate inputs
+
+            if(empty($data_array['name/email']) || empty($data_array['userPwd'])){
+                ViewError("login", "Fill All Inputs...!");
+                redirect("../view/login.php");
+                exit();
+            }
         }
     }
 
