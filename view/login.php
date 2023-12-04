@@ -18,13 +18,15 @@
             Login User
         </div>
         <div class="card-body">
-            <label for="Username">Username/Email : </label>
-            <input type="text" name="name/email" id="" class="form-control">
+            <form action="" method="POST">
+                <label for="Username">Username/Email : </label>
+                <input type="text" name="name/email" id="" class="form-control"><br>
 
-            <label for="password">Password : </label>
-            <input type="password" name="userPwd" id="" class="form-control">
+                <label for="password">Password : </label>
+                <input type="password" name="userPwd" id="" class="form-control"><br>
 
-            <input type="submit" value="Login" name="userLogin" class="btn btn-success">
+                <input type="submit" value="Login" name="userLogin" class="btn btn-success">
+            </form>
         </div>
     </div>
 </div>
