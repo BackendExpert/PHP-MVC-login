@@ -1,7 +1,7 @@
 <?php 
     include("../headers/header.php");
+    include("../includes/session.inc.php");
 ?>
-
 <style>
     .card{
         margin: 25px 0;
@@ -18,7 +18,10 @@
             Login User
         </div>
         <div class="card-body">
-            <form action="" method="POST">
+
+        <?php ViewError() ?>
+            <form action="../controllers/UserController.php" method="POST">
+                <input type="hidden" name="type" value="login">
                 <label for="Username">Username/Email : </label>
                 <input type="text" name="name/email" id="" class="form-control"><br>
 

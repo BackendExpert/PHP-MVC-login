@@ -59,7 +59,7 @@
             $data_array['userPwd'] = password_hash($data_array['userPwd'], PASSWORD_DEFAULT);
 
             //register user
-            if($this->modelUser->register($data)){
+            if($this->modelUser->register($data_array)){
                 redirect("../view/login.php");
             }else{
                 die("ERROR ....!");
