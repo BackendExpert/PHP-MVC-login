@@ -28,7 +28,7 @@
                 <input type="email" name="userEmail" id="" class="form-control"><br>
 
                 <label for="userUid">UserID : </label>
-                <input type="password" name="userUid" id="" class="form-control"><br>
+                <input type="text" name="userUid" id="" class="form-control"><br>
 
                 <label for="password">Password : </label>
                 <input type="password" name="userPwd" id="" class="form-control"><br>
