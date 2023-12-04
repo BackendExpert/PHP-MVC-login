@@ -20,6 +20,7 @@
         </div>
         <div class="card-body">
             <form action="../controllers/UserController.php" method="POST">
+                <input type="hidden" name="type" value="register">
                 <label for="username">Username : </label>
                 <input type="text" name="userName" id="" class="form-control"><br>
 
