@@ -43,4 +43,18 @@
                 return false;
             }
         }
+
+        public function login($emailorName, $password){
+            $row = $this->emailUsernameFind($emailorName, $emailorName);
+
+            if($row == false) return false;
+
+            $passHash = $row->userPwd;
+
+            if(password_verify($password, $passHash)){
+                return $row;
+            }else{
+                return false;
+            }
+        }
     }
