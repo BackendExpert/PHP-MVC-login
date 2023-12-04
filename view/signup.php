@@ -1,6 +1,6 @@
 <?php 
-    include("../headers/header.php")
-    
+    include("../headers/header.php");
+    include("../includes/session.inc.php");
 ?>
 
 <style>
@@ -19,6 +19,9 @@
             Sign Up User
         </div>
         <div class="card-body">
+
+            <?php ViewError('register'); ?>
+
             <form action="../controllers/UserController.php" method="POST">
                 <input type="hidden" name="type" value="register">
                 <label for="username">Username : </label>
