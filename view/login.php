@@ -17,5 +17,14 @@
         <div class="card-header">
             Login User
         </div>
+        <div class="card-body">
+            <label for="Username">Username/Email : </label>
+            <input type="text" name="name/email" id="" class="form-control">
+
+            <label for="password">Password : </label>
+            <input type="password" name="userPwd" id="" class="form-control">
+
+            <input type="submit" value="Login" name="userLogin" class="btn btn-success">
+        </div>
     </div>
 </div>
