@@ -74,8 +74,8 @@
             case 'register':
                 $user->register();
                 break;
-            case 'register':
-                $user->register();
+            case 'login':
+                $user->login();
                 break;
         }
     }
