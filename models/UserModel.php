@@ -8,4 +8,21 @@
         public function __construct(){
             $this->db = new Database;
         }
+
+        //find user by email or username
+
+        public function emailUsernameFind($email, $username){
+            $this->db->query("SELECT * FROM user_tbl WHERE userName = :username OR userEmail = :email");
+            $this->db->bind(':username', $username);
+            $this->db->bind(':email', $email);
+
+            $row = $this->db->single();
+
+            if($this->db->rowCount() > 0){
+                return $row;
+            }else{
+                return  false;
+            }
+
+        }
     }
