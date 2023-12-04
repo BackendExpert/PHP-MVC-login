@@ -65,6 +65,16 @@
                 die("ERROR ....!");
             }
         }
+
+        public function login(){
+            //filter inputs
+            $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+
+            $data_array = [
+                'name/email' => trim($_POST['name/email']),
+                'userPwd' => trim($_POST['userPwd'])
+            ];
+        }
     }
 
     $user = new UserController;
