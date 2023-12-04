@@ -6,12 +6,12 @@
         }
     }
 
-    $init = new UserController;
+    $user = new UserController;
 
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
         switch($_POST['type']){
             case 'register':
-                $init->register();
+                $user->register();
                 break;
         }
     }
