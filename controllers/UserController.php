@@ -119,21 +119,21 @@
         }
     }
 
-    $user = new UserController;
+    $userc = new UserController;
 
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
         switch($_POST['type']){
             case 'register':
-                $user->register();
+                $userc->register();
                 break;
             case 'login':
-                $user->login();
+                $userc->login();
                 break;
         }
     }else{
         switch($_GET['x']){
             case 'logout':
-                $user->logout();
+                $userc->logout();
                 break;
             default:
             redirect("../view/index.php");
