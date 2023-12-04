@@ -13,8 +13,12 @@
     ?></h1>
     <hr>
     <div class="text-center">
-        <a href="login.php"><button class="btn btn-primary">Login</button></a>
-        <a href="signup.php"><button class="btn btn-success">Register</button></a>
+        <?php if(!isset($_SESSION['usersId'])) : ?>
+            <a href="login.php"><button class="btn btn-primary">Login</button></a>
+            <a href="signup.php"><button class="btn btn-success">Register</button></a>
+        <?php else : ?>
+            <a href=""><button class="btn btn-success">Register</button></a>
+        <?php endif;?>
     </div>
 
 </div>
