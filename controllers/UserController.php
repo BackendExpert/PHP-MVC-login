@@ -1,6 +1,7 @@
 <?php   
 
     include("../models/UserModel.php");
+    include("../includes/session.inc.php");
 
     class UserController {
 
