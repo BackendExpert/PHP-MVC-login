@@ -30,6 +30,11 @@
                 ViewError("register", "Inputs Are Empty...!");
                 redirect("../view/signup.php");
             }
+
+            if(!preg_match("/^[a-zA-Z0-9]*$/", $data_array["userUid"])){
+                ViewError("register", "Invalid Username");
+                redirect("../view/signup.php");
+            }
         }
     }
 
