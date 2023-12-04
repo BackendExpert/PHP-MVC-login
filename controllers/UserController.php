@@ -93,6 +93,13 @@
                 redirect("../view/login.php");
             }
         }
+
+        public function UserSession($user){
+            $_SESSION['usersId'] = $user->userId;
+            $_SESSION['userName'] = $user->userName;
+            $_SESSION['userEmail'] = $user->userEmail;
+            redirect("../view/index.php");
+        }
     }
 
     $user = new UserController;
