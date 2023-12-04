@@ -32,7 +32,12 @@
             }
 
             if(!preg_match("/^[a-zA-Z0-9]*$/", $data_array["userUid"])){
-                ViewError("register", "Invalid Username");
+                ViewError("register", "Invalid User ID");
+                redirect("../view/signup.php");
+            }
+
+            if(!filter_var($data_array['userEmail'], FILTER_VALIDATE_EMAIL)){
+                ViewError("register", "Invalid Email Address");
                 redirect("../view/signup.php");
             }
         }
