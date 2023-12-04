@@ -82,6 +82,15 @@
                 redirect("../view/login.php");
                 exit();
             }
+
+            //check user/email
+
+            if($this->modelUser->emailUsernameFind($data_array['name/email'], $data_array['name/email'])){
+
+            }else{
+                ViewError("login", "User Not Found");
+                redirect("../view/login.php");
+            }
         }
     }
 

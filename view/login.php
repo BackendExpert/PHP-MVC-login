@@ -19,7 +19,7 @@
         </div>
         <div class="card-body">
 
-        <?php ViewError() ?>
+        <?php ViewError('login');  ?>
             <form action="../controllers/UserController.php" method="POST">
                 <input type="hidden" name="type" value="login">
                 <label for="Username">Username/Email : </label>
